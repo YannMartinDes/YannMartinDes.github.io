@@ -107,6 +107,48 @@ body {
   margin: auto;
 }
 
+.skills-page-container {
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.skills-page-container h1 {
+  margin: 0;
+}
+.skills-page-container .skills-section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+}
+.skills-page-container .skills-section .skills-list {
+  display: flex;
+  gap: 30px;
+}
+.skills-page-container .skills-section h2 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.skills-page-container .skills-section .skills-card {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.skills-page-container .skills-section .skills-card p {
+  margin: 0;
+  color: #555;
+}
+.skills-page-container .skills-section .skills-card img {
+  height: 50px;
+  max-width: 50px;
+  width: auto;
+}
+
 @media (max-width: 768px) {
   .menu {
     flex-direction: column;
