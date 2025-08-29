@@ -57,7 +57,7 @@ header h1 {
 .project-card {
   background-color: #464646;
   border-radius: 12px;
-  padding: 1rem;
+  padding: 0.8rem;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
@@ -74,18 +74,16 @@ header h1 {
   object-fit: fill;
   border-radius: 8px;
 }
-.project-card .project-card-desc {
-  margin-bottom: 0.5rem;
-}
 .project-card .project-card-desc p {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
   color: #f8f9fa;
 }
 .project-card .project-card-desc a {
   color: #20c997;
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 .project-card .project-card-desc a:hover {
@@ -108,7 +106,7 @@ header h1 {
 .skills-section .skills-list .skills-card {
   background-color: #464646;
   border-radius: 12px;
-  padding: 1rem;
+  padding: 0.8rem;
   box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
