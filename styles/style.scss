@@ -12,244 +12,278 @@ $font-stack: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
 // MIXINS
 @mixin card-style {
-	background-color: $second-background-color;
-	border-radius: 12px;
-	padding: 0.8rem;
-	box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
-	&:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 20px rgba(255, 255, 255, 0.45);
-	}
+  background-color: $second-background-color;
+  border-radius: 12px;
+  padding: 0.8rem;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.45);
+  }
 }
 
 // BASE STYLES
 body {
-	margin: 0;
-	padding: 0;
-	background-color: $background-color;
-	color: $text-color;
-	font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: $font-stack;
 }
 
 ul.menu {
-	list-style: none;
-	display: flex;
-	justify-content: center;
-	background: $second-background-color;
-	padding: 1rem 0;
-	margin: 0;
-	gap: 1.5rem;
-	li a {
-		color: $text-color;
-		text-decoration: none;
-		font-weight: bold;
-		padding: 0.75rem 1rem;
-		border-radius: 6px;
-		&.active {
-			background-color: $primary-color;
-			color: white;
-		}
-		&:hover {
-			background-color: color.adjust($primary-color, $lightness: 10%);
-			color: white;
-		}
-	}
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: $second-background-color;
+  padding: 1rem 0;
+  margin: 0;
+  gap: 1.5rem;
+  li a {
+    color: $text-color;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    &.active {
+      background-color: $primary-color;
+      color: white;
+    }
+    &:hover {
+      background-color: color.adjust($primary-color, $lightness: 10%);
+      color: white;
+    }
+  }
+}
+
+.primary-button {
+  background-color: $primary-color;
+  color: white;
+  padding: 0.9rem 1.6rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background-color: color.adjust($primary-color, $lightness: 8%);
+    transform: translateY(-2px);
+  }
+}
+
+.secondary-button {
+  color: $accent-color;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border: 2px solid $border-color;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $accent-color;
+    color: $background-color;
+    border-color: $accent-color;
+  }
+}
+.project-card-text .secondary-button {
+  margin-top: auto;
+  width: fit-content;
 }
 
 // CONTAINERS
-.home-container,
-.projects-old-page-container,
 .skills-page-container {
-	max-width: 90%;
-	margin: 0 auto;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 #mygithub {
-	color: $accent-color;
-}
-
-// PROJECTS V2
-.projects-page-container {
-	margin: 0 25px;
-}
-
-.project-card {
-	max-width: 45%;
-	background-color: $second-background-color;
-	border-radius: 12px;
-	padding: 20px;
-
-	.project-card-content {
-		min-height: 300px;
-		max-height: 300px;
-		display: flex;
-
-		.project-card-text {
-			flex: 2;
-			display: flex;
-			flex-direction: column;
-
-			h3 {
-				font-size: 1.4rem;
-			}
-
-			.project-card-tech-list {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 8px;
-
-				.project-card-tech-item {
-					background-color: #1a2338;
-					border: $border-color solid 3px;
-
-					color: $text-color;
-					padding: 5px 10px;
-					border-radius: 6px;
-					font-size: 0.9rem;
-					text-align: center;
-				}
-			}
-
-			.project-card-button {
-				background-color: $second-background-color;
-				border: $border-color solid 3px;
-				padding: 10px 20px;
-				border-radius: 8px;
-				width: fit-content;
-				margin-top: auto;
-
-				a {
-					color: $accent-color;
-					font-weight: 500;
-					font-size: 1.15rem;
-					text-decoration: none;
-
-					&:hover {
-						font-weight: 800;
-						text-decoration: none;
-					}
-				}
-			}
-		}
-
-		.project-card-image {
-			background-color: black;
-			flex: 3;
-			border-radius: 8px;
-
-			img {
-				width: 100%;
-				height: 100%;
-
-				object-fit: contain;
-				border-radius: 8px;
-			}
-		}
-
-		display: flex;
-		gap: 30px;
-	}
+  color: $accent-color;
 }
 
 // PROJECTS
-
-.projects-old-page-container header h1 {
-	text-align: center;
-	font-size: 2.5rem;
-	margin-bottom: 2rem;
-	color: $accent-color;
+.projects-page-container {
+  margin: 25px;
+  margin-top: 0;
 }
 
 .projects-container {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 25px;
-	justify-content: center;
-	width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
 }
 
-.project-old-card {
-	@include card-style;
-	text-align: center;
-	max-width: 375px;
-	width: 100%;
+.project-card {
+  max-width: 45%;
+  background-color: $second-background-color;
+  border-radius: 12px;
+  padding: 20px;
 
-	img {
-		width: 375px;
-		height: 375px;
-		object-fit: fill;
-		border-radius: 8px;
-	}
+  .project-card-content {
+    min-height: 300px;
+    max-height: 300px;
+    display: flex;
 
-	.project-card-desc {
-		p {
-			margin-top: 0.3rem;
-			margin-bottom: 0.3rem;
-			font-size: 1rem;
-			color: $text-color;
-		}
+    .project-card-text {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
 
-		a {
-			color: $accent-color;
-			font-weight: 600;
-			font-size: 1.3rem;
-			text-decoration: none;
+      h3 {
+        font-size: 1.4rem;
+      }
 
-			&:hover {
-				text-decoration: underline;
-			}
-		}
-	}
+      p {
+        line-height: 1.5;
+      }
+      .project-card-tech-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        .project-card-tech-item {
+          background-color: #1a2338;
+          border: $border-color solid 3px;
+
+          color: $text-color;
+          padding: 5px 10px;
+          border-radius: 6px;
+          font-size: 0.9rem;
+          text-align: center;
+        }
+      }
+
+      .project-card-button {
+        background-color: $second-background-color;
+        border: $border-color solid 3px;
+        padding: 10px 20px;
+        border-radius: 8px;
+        width: fit-content;
+        margin-top: auto;
+
+        a {
+          color: $accent-color;
+          font-weight: 500;
+          font-size: 1.15rem;
+          text-decoration: none;
+
+          &:hover {
+            font-weight: 800;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .project-card-image {
+      background-color: black;
+      flex: 3;
+      border-radius: 8px;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+        border-radius: 8px;
+      }
+    }
+
+    display: flex;
+    gap: 30px;
+  }
 }
 
 // SKILLS
 .skills-section {
-	margin-bottom: 3rem;
+  margin-bottom: 3rem;
 
-	h2 {
-		font-size: 1.8rem;
-		color: $accent-color;
-		margin-bottom: 1rem;
-	}
+  h2 {
+    font-size: 1.8rem;
+    color: $accent-color;
+    margin-bottom: 1rem;
+  }
 
-	.skills-list {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1.5rem;
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
 
-		.skills-card {
-			@include card-style;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			width: 120px;
-			text-align: center;
-			img {
-				width: 60px;
-				height: 60px;
-				margin-bottom: 0.5rem;
-			}
-			p {
-				margin: 0;
-				font-size: 0.9rem;
-			}
-		}
-	}
+    .skills-card {
+      @include card-style;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 120px;
+      text-align: center;
+      img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 0.5rem;
+      }
+      p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+    }
+  }
 }
 
-// RESPONSIVE
-@media (max-width: 768px) {
-	ul.menu {
-		flex-direction: column;
-		align-items: center;
-	}
+// INDEX HOME
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 4rem 1rem;
+}
 
-	.projects-container {
-		grid-template-columns: 1fr;
-	}
+.home-cta {
+  display: flex;
+  justify-content: center;
+}
 
-	.skills-list {
-		justify-content: center;
-	}
+.home-description {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: $text-color;
+  }
+
+  strong {
+    color: $accent-color;
+    font-weight: 600;
+  }
+}
+
+.home-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.home-header {
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+    color: $text-color;
+  }
+
+  h2 {
+    margin-top: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: $secondary-color;
+  }
 }
