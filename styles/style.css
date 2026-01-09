@@ -61,18 +61,15 @@ ul.menu li a:hover {
   border-color: #22d3ee;
 }
 
-.project-card-text .secondary-button {
-  margin-top: auto;
-  width: fit-content;
-}
-
 .skills-page-container {
   max-width: 90%;
   margin: 0 auto;
 }
 
 #mygithub {
+  text-decoration: none;
   color: #22d3ee;
+  font-weight: 700;
 }
 
 .projects-page-container {
@@ -145,6 +142,8 @@ ul.menu li a:hover {
 }
 .project-card .project-card-content .project-card-text .secondary-button {
   display: flex;
+  margin-top: auto;
+  width: fit-content;
   align-items: center;
 }
 .project-card .project-card-content .project-card-text .secondary-button img {
@@ -277,6 +276,41 @@ ul.menu li a:hover {
   font-size: 1.3rem;
   font-weight: 500;
   color: #94a3b8;
+}
+
+@media (max-width: 900px) {
+  .projects-page-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .project-card {
+    width: 100%;
+    max-width: none;
+  }
+  .project-card .project-card-content {
+    flex-direction: column;
+    gap: 10px;
+    min-height: fit-content;
+    max-height: fit-content;
+  }
+  .project-card .project-card-content .project-card-text {
+    gap: 10px;
+  }
+  .project-card .project-card-content .project-card-text h3 {
+    margin: 0;
+  }
+  .project-card .project-card-content .project-card-text p {
+    margin: 0;
+  }
+  .project-card .project-card-content .project-card-image {
+    order: -1;
+    width: 100%;
+    max-height: 220px;
+  }
+  .project-card .project-card-content .project-card-image img {
+    max-height: 220px;
+    object-fit: contain;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

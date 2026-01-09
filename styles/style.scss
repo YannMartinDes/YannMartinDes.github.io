@@ -89,11 +89,6 @@ ul.menu {
 	}
 }
 
-.project-card-text .secondary-button {
-	margin-top: auto;
-	width: fit-content;
-}
-
 // CONTAINERS
 .skills-page-container {
 	max-width: 90%;
@@ -101,7 +96,9 @@ ul.menu {
 }
 
 #mygithub {
+	text-decoration: none;
 	color: $accent-color;
+	font-weight: 700;
 }
 
 // PROJECTS
@@ -180,6 +177,8 @@ ul.menu {
 
 			.secondary-button {
 				display: flex;
+				margin-top: auto;
+				width: fit-content;
 				align-items: center;
 
 				img {
@@ -332,5 +331,48 @@ ul.menu {
 		font-size: 1.3rem;
 		font-weight: 500;
 		color: $secondary-color;
+	}
+}
+
+@media (max-width: 900px) {
+	.projects-page-container {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.project-card {
+		width: 100%;
+		max-width: none;
+
+		.project-card-content {
+			flex-direction: column;
+			gap: 10px;
+
+			min-height: fit-content;
+			max-height: fit-content;
+
+			.project-card-text {
+				gap: 10px;
+
+				h3 {
+					margin: 0;
+				}
+
+				p {
+					margin: 0;
+				}
+			}
+
+			.project-card-image {
+				order: -1;
+				width: 100%;
+				max-height: 220px;
+
+				img {
+					max-height: 220px;
+					object-fit: contain;
+				}
+			}
+		}
 	}
 }
