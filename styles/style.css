@@ -51,7 +51,7 @@ ul.menu li a:hover {
   font-weight: 500;
   text-decoration: none;
   padding: 0.6rem 1rem;
-  border: 2px solid #222b42;
+  border: 2px solid #29334e;
   border-radius: 8px;
   transition: all 0.2s ease;
 }
@@ -118,7 +118,7 @@ ul.menu li a:hover {
 }
 .project-card .project-card-content .project-card-text .project-card-tech-list .project-card-tech-item {
   background-color: #1a2338;
-  border: #222b42 solid 3px;
+  border: #29334e solid 3px;
   color: #e5e7eb;
   padding: 5px 10px;
   border-radius: 6px;
@@ -127,7 +127,7 @@ ul.menu li a:hover {
 }
 .project-card .project-card-content .project-card-text .project-card-button {
   background-color: #12223d;
-  border: #222b42 solid 3px;
+  border: #29334e solid 3px;
   padding: 10px 20px;
   border-radius: 8px;
   width: fit-content;
@@ -142,6 +142,23 @@ ul.menu li a:hover {
 .project-card .project-card-content .project-card-text .project-card-button a:hover {
   font-weight: 800;
   text-decoration: none;
+}
+.project-card .project-card-content .project-card-text .secondary-button {
+  display: flex;
+  align-items: center;
+}
+.project-card .project-card-content .project-card-text .secondary-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.project-card .project-card-content .project-card-text .secondary-button a {
+  color: #22d3ee;
+  text-decoration: none;
+}
+.project-card .project-card-content .project-card-text .secondary-button:hover a {
+  color: #08111f;
 }
 .project-card .project-card-content .project-card-image {
   background-color: black;
@@ -227,6 +244,23 @@ ul.menu li a:hover {
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
+}
+.home-links .secondary-button {
+  display: flex;
+  align-items: center;
+}
+.home-links .secondary-button img {
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+.home-links .secondary-button a {
+  color: #22d3ee;
+  text-decoration: none;
+}
+.home-links .secondary-button:hover a {
+  color: #08111f;
 }
 
 .home-header {
