@@ -86,6 +86,7 @@ ul.menu li a:hover {
 
 .project-card {
   max-width: 45%;
+  min-width: 45%;
   background-color: #12223d;
   border-radius: 12px;
   padding: 20px;
